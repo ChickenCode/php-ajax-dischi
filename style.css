@@ -1,0 +1,33 @@
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.album {
+     flex-basis: 33%;   
+     align-items: center; 
+}
+
+.container {
+    flex-wrap: wrap;
+    
+}
+
+.album img {
+    height: 200px;
+}
+
+.justify-center {
+  justify-content: center;  
+  margin: 20px;
+}
+select {
+    margin-left: 10px;
+}
