@@ -31,3 +31,14 @@
 select {
     margin-left: 10px;
 }
+
+.top-part {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+
