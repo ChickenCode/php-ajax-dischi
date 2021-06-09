@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+
+        
+        <h1 style="text-align: center;">My Favourite Albums of All Times</h1>
+        <select name="" id="" v-model="searchGenre">
+            <option value="" disabled selected>Scegli un genere</option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="metal">Metal</option>
+        </select>
+        <button @click="fetchData()">Ricerca per genere </button>
+
+        <div class="container flex">
+            <div v-for="card in discs" class='flex flex-column album'>
+                <img :src="card.poster" alt="">
+                <h2>{{card.title}}</h2>
+                <p>{{card.author}}</p>
+                <p>{{card.genre}}</p>
+                <p>{{card.year}}</p>
+            </div>
+        </div>
+    </div>
+
+
+<script src="vue.js"></script>
+</body>
+</html>
