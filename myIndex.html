@@ -37,8 +37,11 @@
         </div>
 
         <div style="text-align: center; margin-top: 20px;"> 
-            <button @click="pageMinus()">Prev</button>
-            <button @click="pagePlus()">Next</button>
+            <button v-if="page > 1" @click="firstPage()">First</button>
+            <button v-if="page > 1" @click="pageMinus()">Prev</button>
+            <span>Page {{page}}</span>
+            <button v-if="page < totalPageNumbers" @click="pagePlus()">Next</button>
+            <button v-if="page < totalPageNumbers" @click="lastPage()">Last</button>
         </div>
         
         

@@ -35,7 +35,7 @@ new Vue({
             let itemsPerPage = 3;
             let currentPage = this.page;
             let totalPages = data.length / itemsPerPage;
-            this.totalPageNumbers = totalPages;
+            this.totalPageNumbers = Math.ceil(totalPages);
             let offset = itemsPerPage * (currentPage - 1);
             let paginetedData = data.slice(offset, (offset + itemsPerPage));
 
@@ -56,6 +56,16 @@ new Vue({
             if (this.page < 1) {
                 this.page = 1
             }
+        },
+
+        firstPage() {
+            this.page = 1
+            this.fetchData()
+        },
+
+        lastPage() {
+            this.page = this.totalPageNumbers
+            this.fetchData()    
         }
 
     },
